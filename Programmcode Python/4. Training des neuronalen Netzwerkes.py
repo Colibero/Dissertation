@@ -26,7 +26,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print("We're using =>", device)
 
 #location of the root directory
-root_dir = "D:/Christof/cnn_database_tests/cd206/"
+root_dir = "root_dir"
 print("The data lies here =>", root_dir)
 
 #definition of the image transformation function prior to training 
@@ -193,4 +193,4 @@ for e in tqdm(range(1, 50)):
     Train Acc: {train_epoch_acc/len(train_loader):.3f}| Val Acc: {val_epoch_acc/len(val_loader):.3f}')
     
 #save the trained model    
-torch.save(model.state_dict(), 'D:/Christof/trained_networks/211001_resnet50_trained_cd206.pth')
+torch.save(model.state_dict(), '.../trained_networks/211001_resnet50_trained_cd206.pth')
